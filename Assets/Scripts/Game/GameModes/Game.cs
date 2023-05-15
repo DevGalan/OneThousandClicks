@@ -20,8 +20,24 @@ namespace Game
         }
 
         public FinishGameDelegate FinishGame { get => _finishGame; set => _finishGame = value; }
-        public long TotalTouches { get => _totalTouches; set => _totalTouches = value; }
-        public double Time { get => _time; set => _time = value; }
+        public long TotalTouches 
+        { 
+            get => _totalTouches; 
+            set
+            {
+                _totalTouches = value;
+                if (_totalTouches < 0) _totalTouches = 0;
+            }
+        }
+        public double Time 
+        { 
+            get => _time; 
+            set
+            {
+                _time = value;
+                if (_time < 0) _time = 0;
+            }
+        }
         public bool Playable { get => _playable; set => _playable = value; }
         public bool InGame { get => _inGame; set => _inGame = value; }
         public bool Finished { get => _finished; set => _finished = value; }

@@ -21,15 +21,15 @@ namespace Game
         {
             if (TotalTouches <= 0) 
             {
-                StopGame(false);
                 TotalTouches = _initialTouches - TotalTouches;
+                StopGame(false);
             }
             Time += UnityEngine.Time.deltaTime;
         }
 
         public override double GetCPS()
         {
-            return Math.Truncate(((_initialTouches - TotalTouches) / Time) * 1000) / 1000;
+            return Math.Truncate(((TotalTouches) / Time) * 1000) / 1000;
         }
 
         public override string GetGameModeName(bool withLineBreak)
@@ -40,7 +40,7 @@ namespace Game
 
         public override string GetMessage()
         {
-            return $"Score: {_initialTouches - TotalTouches} clicks\nTime: {TimeFormatter.FormatTime(Time)}\nCPS: {GetCPS()}/s";
+            return $"Score: {TotalTouches} clicks\nTime: {TimeFormatter.FormatTime(Time)}\nCPS: {GetCPS()}/s";
         }
 
         public override bool IsBetterThan(Game game)

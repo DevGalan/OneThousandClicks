@@ -95,17 +95,17 @@ MonoBehaviour:
     sdkLink: https://github.com/googleads/googleads-mobile-unity/releases
     platformSettings:
     - platform: 0
-      enabled: 1
+      enabled: 0
       appId:
-        id: ca-app-pub-9275744235558845~2974462095
+        id: 
         displayName: App ID
         notRequired: 0
       idBanner:
-        id: ca-app-pub-9275744235558845/8035217084
+        id: 
         displayName: Banner ID
         notRequired: 0
       idInterstitial:
-        id: ca-app-pub-9275744235558845/1469808737
+        id: 
         displayName: Interstitial ID
         notRequired: 0
       idRewarded:
@@ -298,8 +298,8 @@ MonoBehaviour:
         notRequired: 0
       idBanner:
         id: 
-        displayName: 
-        notRequired: 1
+        displayName: Banner Placement ID
+        notRequired: 0
       idInterstitial:
         id: 
         displayName: Interstitial Placement ID
@@ -308,7 +308,7 @@ MonoBehaviour:
         id: 
         displayName: Rewarded Placement ID
         notRequired: 0
-      hasBanner: 0
+      hasBanner: 1
       hasInterstitial: 1
       hasRewarded: 1
       directedForChildren: 0
@@ -320,8 +320,8 @@ MonoBehaviour:
         notRequired: 0
       idBanner:
         id: 
-        displayName: 
-        notRequired: 1
+        displayName: Banner Placement ID
+        notRequired: 0
       idInterstitial:
         id: 
         displayName: Interstitial Placement ID
@@ -330,7 +330,7 @@ MonoBehaviour:
         id: 
         displayName: Rewarded Placement ID
         notRequired: 0
-      hasBanner: 0
+      hasBanner: 1
       hasInterstitial: 1
       hasRewarded: 1
       directedForChildren: 0
@@ -342,8 +342,8 @@ MonoBehaviour:
         notRequired: 0
       idBanner:
         id: 
-        displayName: 
-        notRequired: 1
+        displayName: Banner Placement ID
+        notRequired: 0
       idInterstitial:
         id: 
         displayName: Interstitial Placement ID
@@ -352,7 +352,7 @@ MonoBehaviour:
         id: 
         displayName: Rewarded Placement ID
         notRequired: 0
-      hasBanner: 0
+      hasBanner: 1
       hasInterstitial: 1
       hasRewarded: 1
       directedForChildren: 0

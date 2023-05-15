@@ -15,8 +15,8 @@ namespace Game
         {
             if (Time <= 0) 
             {
-                StopGame(false);
                 Time = _initialTime;
+                StopGame(false);
             }
             Time -= UnityEngine.Time.deltaTime;
         }
