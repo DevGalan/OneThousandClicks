@@ -11,9 +11,12 @@ public class AdsManager : MonoBehaviour
     private int _clicks;
     [SerializeField]
     private LayoutElement[] layoutElements;
+    [SerializeField]
+    private bool _debugMode;
 
     private void Awake() 
     {
+        if (_debugMode) return;
         Advertisements.Instance.Initialize();
         Advertisements.Instance.debug = false;
     }

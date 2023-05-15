@@ -40,6 +40,7 @@ namespace Game
 
         public void OnPointerDown(PointerEventData eventData)
         {
+            if (_buttonPressed) return;
             if (_timeBeforeStartAction == 0 && _actionSpeed == 0)
             {
                 pressed?.Invoke();
@@ -49,6 +50,7 @@ namespace Game
 
         public void OnPointerUp(PointerEventData eventData)
         {
+            if (!_buttonPressed) return;
             unPressed?.Invoke();
             _buttonPressed = false;
             _pressingTime = 0;

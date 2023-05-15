@@ -10,7 +10,7 @@ namespace Game
             GleyNotifications.Initialize();
         }
 
-        void OnApplicationQuit()
+        private void Start() 
         {
             int random = UnityEngine.Random.Range(0, 10);
             if (random < 9)
