@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class AdsManager : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class AdsManager : MonoBehaviour
     private int _clicksForAd;
     [SerializeField]
     private int _clicks;
+    [SerializeField]
+    private LayoutElement[] layoutElements;
 
     private void Awake() 
     {
@@ -18,6 +21,16 @@ public class AdsManager : MonoBehaviour
     private void Start() 
     {
         Advertisements.Instance.ShowBanner(BannerPosition.BOTTOM, BannerType.Adaptive);
+        SetBannerHeight();
+    }
+
+    private void SetBannerHeight()
+    {
+        foreach (var item in layoutElements)
+        {
+            item.minHeight = 131;
+            item.preferredHeight = 131;
+        }
     }
 
     public void AnuncioPorTiempo()
