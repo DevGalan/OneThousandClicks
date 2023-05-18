@@ -95,17 +95,17 @@ MonoBehaviour:
     sdkLink: https://github.com/googleads/googleads-mobile-unity/releases
     platformSettings:
     - platform: 0
-      enabled: 0
+      enabled: 1
       appId:
-        id: 
+        id: ca-app-pub-9275744235558845~2974462095
         displayName: App ID
         notRequired: 0
       idBanner:
-        id: 
+        id: ca-app-pub-9275744235558845/8035217084
         displayName: Banner ID
         notRequired: 0
       idInterstitial:
-        id: 
+        id: ca-app-pub-9275744235558845/1469808737
         displayName: Interstitial ID
         notRequired: 0
       idRewarded:

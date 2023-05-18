@@ -31,7 +31,7 @@ MonoBehaviour:
     useRealTime: 1
     realTime: 24
   iosAppID: 
-  googlePlayBundleID: com.GalanDev.OneThousandClicks
+  googlePlayBundleID: com.GalanDev.Onethousandclicks
   ratePopupCanvas: {fileID: 1689987329747834, guid: 0c500f9608704b047931b8bf2a44cc8b, type: 3}
   popupGameObject: {fileID: 1010002214022590, guid: 37ebed2cdd4cc8b4aa99ac649877d981, type: 3}
   ratePopupType: 0
