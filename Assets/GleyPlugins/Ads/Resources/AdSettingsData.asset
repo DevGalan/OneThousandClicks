@@ -242,7 +242,7 @@ MonoBehaviour:
     sdkLink: https://assetstore.unity.com/packages/add-ons/services/unity-monetization-66123
     platformSettings:
     - platform: 0
-      enabled: 0
+      enabled: 1
       appId:
         id: 
         displayName: Game ID
@@ -552,7 +552,7 @@ MonoBehaviour:
       hasInterstitial: 1
       hasRewarded: 1
       directedForChildren: 0
-  debugMode: 0
+  debugMode: 1
   usePlaymaker: 0
   useBolt: 0
   useGameflow: 0

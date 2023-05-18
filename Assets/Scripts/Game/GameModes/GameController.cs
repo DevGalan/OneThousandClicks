@@ -15,6 +15,7 @@ namespace Game
         private TextMeshProUGUI _timeText;
 
         public UnityEvent gameFinished;
+        public UnityEvent shareRecord;
         public UnityEvent increaseRateEvents;
 
         private Game _game;
@@ -92,6 +93,7 @@ namespace Game
                     .SetTitle("Game finished with a\nNEW RECORD!")
                     .SetMessage(_game.GetGameModeName(false) + "\n" + "Last record:\n" + recordGame.GetMessage() + "\nNew record:\n" + _game.GetMessage())
                     .SetConfirmAction("Confirm", () => Debug.Log("Partida terminada"))
+                    .SetAlternateAction("Share", () => shareRecord?.Invoke())
                     .OpenMenu();
                 return;
             }
