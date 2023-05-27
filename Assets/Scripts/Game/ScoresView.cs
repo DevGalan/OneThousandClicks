@@ -7,6 +7,8 @@ namespace Game
     public class ScoresView : MonoBehaviour
     {
         [SerializeField]
+        private GameObject _shareObject;
+        [SerializeField]
         private TextMeshProUGUI _gameModeText;
         [SerializeField]
         private TextMeshProUGUI _pressedTimesText;
@@ -24,6 +26,7 @@ namespace Game
             {
                 _pressedTimesText.transform.parent.parent.gameObject.SetActive(true);
                 _pressedTimesText.text = "Not played yet";
+                _shareObject.SetActive(false);
                 _timeText.transform.parent.parent.gameObject.SetActive(false);
                 _cPSText.transform.parent.parent.gameObject.SetActive(false);
                 return;
@@ -31,6 +34,7 @@ namespace Game
             _pressedTimesText.text = _game.TotalTouches.ToString() + " clicks";
             _timeText.text = TimeFormatter.FormatTime(values[1]) + " millis";
             _cPSText.text = _game.GetCPS().ToString() + " clicks/s";
+            _shareObject.SetActive(true);
             _pressedTimesText.transform.parent.parent.gameObject.SetActive(mode != 0);
             _timeText.transform.parent.parent.gameObject.SetActive(mode !=  1);
             _cPSText.transform.parent.parent.gameObject.SetActive(true);

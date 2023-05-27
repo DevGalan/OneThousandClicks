@@ -6,10 +6,15 @@ public class ShareScreenShotManager : MonoBehaviour
 {
     public void ShareMaxScore()
     {
-        StartCoroutine(TakeScreenshotAndShare());
+        StartCoroutine(TakeScreenshotAndShare("I have beaten my own record, try to beat me!\n\n"));
     }
 
-    private IEnumerator TakeScreenshotAndShare()
+    public void ShareScore()
+    {
+        StartCoroutine(TakeScreenshotAndShare("This is my record, what's yours?\n\n"));
+    }
+
+    private IEnumerator TakeScreenshotAndShare(string message)
     {
         yield return new WaitForEndOfFrame();
 
@@ -23,7 +28,7 @@ public class ShareScreenShotManager : MonoBehaviour
         Destroy(ss);
 
         new NativeShare().AddFile(filePath)
-            .SetSubject("Im insane!").SetText("I have beaten my own record, try to beat me!\n\n").SetUrl("https://play.google.com/store/apps/details?id=com.GalanDev.Onethousandclicks")
+            .SetSubject("Im insane!").SetText(message).SetUrl("https://play.google.com/store/apps/details?id=com.GalanDev.Onethousandclicks")
             .SetCallback((result, shareTarget) => Debug.Log("Share result: " + result + ", selected app: " + shareTarget))
             .Share();
     }
